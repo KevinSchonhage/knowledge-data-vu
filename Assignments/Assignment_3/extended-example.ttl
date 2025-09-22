@@ -1,48 +1,48 @@
-@prefix ns1: <http://dbpedia.org/ontology/> .
-@prefix ns2: <http://example.com/kad/> .
+@prefix ns1: <http://example.com/kad/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
 @prefix ns3: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns2:Netherlands a ns2:Country ;
-    ns2:contains ns2:Ijsselmeer ;
-    ns2:containsCity ns2:Rotterdam ;
-    ns2:hasCapital ns2:Amsterdam ;
-    ns2:hasName "The Netherlands" ;
-    ns2:neighbours ns2:Belgium .
+ns1:Netherlands a ns1:Country ;
+    ns1:contains ns1:Ijsselmeer ;
+    ns1:containsCity ns1:Rotterdam ;
+    ns1:hasCapital ns1:Amsterdam ;
+    ns1:hasName "The Netherlands" ;
+    ns1:neighbours ns1:Belgium .
 
-ns2:hasCapital rdfs:range ns2:Capital ;
-    rdfs:subPropertyOf ns2:containsCity .
+ns1:hasCapital rdfs:range ns1:Capital ;
+    rdfs:subPropertyOf ns1:containsCity .
 
-ns2:neighbours rdfs:subPropertyOf ns2:closeBy .
+ns1:neighbours rdfs:subPropertyOf ns1:closeBy .
 
-ns2:Amsterdam a ns2:Capital ;
-    ns1:populationTotal "907976"^^xsd:nonNegativeInteger ;
-    ns2:closeBy ns2:Germany ;
+ns1:Amsterdam a ns1:Capital ;
+    ns2:populationTotal "907976"^^xsd:nonNegativeInteger ;
+    ns1:closeBy ns1:Germany ;
     ns3:lat "52.36666488647461"^^xsd:float ;
     ns3:long "4.900000095367432"^^xsd:float .
 
-ns2:Belgium a ns2:Country .
+ns1:Belgium a ns1:Country .
 
-ns2:Berlin ns1:populationTotal "3677472"^^xsd:nonNegativeInteger ;
+ns1:Berlin ns2:populationTotal "3677472"^^xsd:nonNegativeInteger ;
     ns3:lat "52.52000045776367"^^xsd:float ;
     ns3:long "13.40499973297119"^^xsd:float .
 
-ns2:EuropeanCountry rdfs:subClassOf ns2:Country .
+ns1:EuropeanCountry rdfs:subClassOf ns1:Country .
 
-ns2:Germany a ns2:EuropeanCountry ;
-    ns2:hasCapital ns2:Berlin .
+ns1:Germany a ns1:EuropeanCountry ;
+    ns1:hasCapital ns1:Berlin .
 
-ns2:closeBy rdfs:domain ns2:Location ;
-    rdfs:range ns2:Location .
+ns1:closeBy rdfs:domain ns1:Location ;
+    rdfs:range ns1:Location .
 
-ns2:containsCity rdfs:domain ns2:Country ;
-    rdfs:range ns2:City ;
-    rdfs:subPropertyOf ns2:contains .
+ns1:containsCity rdfs:domain ns1:Country ;
+    rdfs:range ns1:City ;
+    rdfs:subPropertyOf ns1:contains .
 
-ns2:Capital rdfs:subClassOf ns2:City .
+ns1:Capital rdfs:subClassOf ns1:City .
 
-ns2:City rdfs:subClassOf ns2:Location .
+ns1:City rdfs:subClassOf ns1:Location .
 
-ns2:Country rdfs:subClassOf ns2:Location .
+ns1:Country rdfs:subClassOf ns1:Location .
 
